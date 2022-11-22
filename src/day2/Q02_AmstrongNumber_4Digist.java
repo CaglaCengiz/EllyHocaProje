@@ -22,7 +22,7 @@ public class Q02_AmstrongNumber_4Digist {  /*
         for (int i = 0; i < basamak.length; i++) {
             toplam += Math.pow(Integer.parseInt(basamak[i]), basamak.length);  //Math.pow(taban, us)
             //String olan her bir basamagi integer a cevirdik -> taban
-            //basamak.length -> us
+            //basamak.length -> üs
         }
         System.out.println(Integer.parseInt(strSayi) == toplam ? "bu bir armstrong sayidir" : "bu bir armstrong sayi degildir");
 

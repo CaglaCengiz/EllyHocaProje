@@ -20,14 +20,14 @@ public class Q03_FibanacciListNumber {
             System.out.println("daha buyuk sayı giriniz");
 
         }else {
-            while (fibonacci.get(i)<sayı){
-                fibonacci.add(fibonacci.get(i)+ fibonacci.get(i-1));
+            while (fibonacci.get(i)<sayı){//fibonacci elemanları sayıdan kucuk olduğu surece
+                fibonacci.add(fibonacci.get(i)+ fibonacci.get(i-1));//bir onceki eleman ile topla
                 i++;
 
             }
         }
-        if (fibonacci.get(fibonacci.size()-1)>sayı){
-            fibonacci.remove(fibonacci.get(fibonacci.size()-1));
+        if (fibonacci.get(fibonacci.size()-1)>sayı){//fibonaccideki son eleman sayıdan buyukse
+            fibonacci.remove(fibonacci.get(fibonacci.size()-1));//bu elemanı kadır
             System.out.println("girdiğiniz sayı fibonacci dizisinde bulunmamaktadır" +
                     "\n girilen sayıya kadar olan fibonacci dizisi :" +fibonacci);
         }else {
