@@ -39,6 +39,7 @@ public class Q01_SetTask {
         //Bolum2
 
         Set<Character> characterSet = new HashSet<>();
+        System.out.println("characterSet = " + characterSet);
         karakterleriSeteEkle(characterSet,'A', 'B', 'R', 'r', 'q'  );
 
         System.out.println("karakterler sete eklendikten sonra :" + characterSet);

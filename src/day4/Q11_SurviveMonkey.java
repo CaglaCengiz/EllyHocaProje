@@ -10,6 +10,15 @@ public class Q11_SurviveMonkey {
 		Use do while loop, increment and decrement and if statements
 		int numberOfBananas =165, survivalDays = 1;
 		boolean monkeyAlive = true;
+
+		Adada yalnız bir maymun var
+        Her gün 4 muz yemesi gerekiyor.
+        o adada sadece 165 muz var
+        Aşağıdaki değişkenleri oluşturun ve kaç gün olduğunu bulun
+         maymun hayatta kalabilir.
+        do while döngüsü, artırma ve azaltma ve if deyimlerini kullanın
+        int Bananas Sayısı = 165, hayatta kalma Günleri = 1;
+        boolean maymunAlive = true;
 		*/
         public static void main(String[] args) {
             int numberOfBananas =165;

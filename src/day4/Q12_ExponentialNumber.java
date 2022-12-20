@@ -10,27 +10,28 @@ public class Q12_ExponentialNumber {
     // 2, 3 --> 2^3 = 2*2*2= 8
 
     // 4, 3 --> 4^3= 4*4*4 = 64
+   //Kullanıcıdan 2 numara alın.
+    //ilk sayı tabanı
+    //ikinci sayı Üst
+    //Bir sayının asalını bulan bir kod yazın.
+    // 2, 3 --> 2^3 = 2*2*2= 8
 
+    // 4, 3 --> 4^3= 4*4*4 = 64
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Lutfen taban ve us giriniz :");
+        System.out.println("Lutfen taban giriniz :");
         int taban = scan.nextInt();
+        System.out.println("Lutfen us giriniz :");
         int us = scan.nextInt();
 
         int sonuc =1;
 
-    //    while(us !=0){
-    //        sonuc*=taban;
-    //        us--;
-    //    }
-    //    System.out.println("while ile :"+sonuc);
-
-
         for(int i = 0; i <us;i++){
-            sonuc*=taban;
+           sonuc*=taban;
         }
         System.out.println("for ile :" + sonuc) ;
+      //  System.out.println(Math.pow(taban,us));
     }
 
 

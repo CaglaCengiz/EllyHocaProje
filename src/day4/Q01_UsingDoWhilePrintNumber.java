@@ -12,7 +12,7 @@ public class Q01_UsingDoWhilePrintNumber {
    */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        //System.out.println("sayi giriniz :");
+        System.out.println("sayi giriniz :");
         int sayi = scanner.nextInt();
 
         do {

@@ -19,38 +19,55 @@ public class C2_StringList_StreamOrnekleri {
         list.add("Cok");
         list.add("Eglenceli");
         list.add("Oldu");
+        ilkHarfiDveyaColanListele(list);
+        basVeSonayildizekle(list);
+        alfabetikOlarakSirala(list);
+        tumLlerisilme(list);
+        icindeEolanlariListele(list);
+        ilkHarfini3kereTekrar(list);
+        tumElIlkHarfByk(list);
+        uzunlugu4Ve6haricListele(list);
 
-        System.out.println("s1");
-        // S1: ilk harfi d ve ya c olanlari listeleyelim
+    }
+    // S8: uzunlugu 4 ve 6 olanlar haric bir liste olusturunuz
+    private static void uzunlugu4Ve6haricListele(List<String> list) {
+        System.out.println();
+        list.stream().filter(t->t.length()!=6 && t.length()!=4).forEach(Methods::yazString);
+    }
+    // S7: tum elemanlarin ilk harfini buyuk digerlerini kucuk yaziniz
+    private static void tumElIlkHarfByk(List<String> list) {
+        System.out.println();
+        list.stream().map(t->t.substring(0,1).toUpperCase()+t.substring(1).toLowerCase()).forEach(Methods::yazString);
+    }
+    // S6 : ilk harfini 3 kere tekrar edip yazalim ornek jjjava gibi
+    private static void ilkHarfini3kereTekrar(List<String> list) {
+        System.out.println();
+        list.stream().map(t->t.substring(0,1)+t.substring(0,1)+t).forEach(Methods::yazString);
+    }
+    //S5 : icinde e olanlardan yeni bir list olusturunuz
+    private static void icindeEolanlariListele(List<String> list) {
+        System.out.println();
+        list.stream().filter(t->t.contains("e")).forEach(Methods::yazString);
+    }
+    //S4: tum 'l' leri silelim yazdiralim
+    private static void tumLlerisilme(List<String> list) {
+        System.out.println();
+        list.stream().map(t->t.toLowerCase().replaceAll("l","")).forEach(Methods::yazString);
+    }
+    //S3: alfabetik  olarak siralayalim
+    private static void alfabetikOlarakSirala(List<String> list) {
+        System.out.println();
+        list.stream().map(t->t.toLowerCase()).sorted().forEach(Methods::yazString);
+    }
+    //S2: tum stringlerin basina ve sonuna yildiz ekleyerek yazdiralim
+    private static void basVeSonayildizekle(List<String> list) {
+        System.out.println();
+        list.stream().map(t->"*"+t+"*").forEach(Methods::yazString);
+    }
 
-        list.stream().filter(t->t.charAt(0)=='d'||t.charAt(0)=='c').collect(Collectors.toList());
-
-        System.out.println("s2");
-        //S2: tum stringlerin basina ve sonuna yildiz ekleyerek yazdiralim
-        System.out.println(list.stream().map(t -> "*" + t + "*"));
-
-        System.out.println("s3");
-        //S3: alfabetik  olarak siralayalim list olarak ***sorted
-        System.out.println(list.stream().sorted());
-
-        System.out.println("s4");
-        //S4: tum 'l' leri silelim yazdiralim ***map(replaceAll)
-       /* System.out.println(list.stream().filter(t-> t.contains
-
-        System.out.println("s5");
-        //S5 : icinde e olanlardan yeni bir list olusturunuz***filter(contains())  collect()
-        list.stream().filter(t->t.contains("e")).collect(Collectors.toList());
-
-        System.out.println("s6");
-        // S6 : ilk harfini 3 kere tekrar edip yazalim ornek jjjava gibi ***map(t->t.substring(0,1)+t->t.substring
-list.stream().map(t->t.substring(0,1)+t->t.substring(0,1)+tt->t.substring(0,1)).forEach(t->);
-        // S7: tum elemanlarin ilk harfini buyuk digerlerini kucuk yaziniz
-        list.stream().map(t->t.substring(0,1).toUpperCase().substring(1).toLowerCase()).forEach((t) -> System.out.print(t + " "));
-
-        System.out.println("s8");
-        // S8: uzunlugu 4 ve 6 olanlar haric bir liste olusturunuz
-        list.stream().filter(t->t.length()!=4&& t.length()!=6).collect(Collectors.toList());*/
-
-
+    // S1: ilk harfi d ve ya c olanlari listeleyelim
+    private static void ilkHarfiDveyaColanListele(List<String> list) {
+        System.out.println();
+        list.stream().map(t->t.toLowerCase()).filter(t->t.startsWith("d")||t.startsWith("c")).forEach(Methods::yazString);
     }
 }

@@ -52,6 +52,24 @@ public class Q04_PerfectNumber {/* Perfect Number (Mukemmel sayi)
             System.out.println(sayı + "sayısı mukemmel sayı değildir");
         }
 
+//baska yol
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Bir sayi giriniz :");
+        int sayi = scan.nextInt();
+        int topla=0;
+        sayi=0;
+        int j=1;
+        while (j<=sayi/2) {
+            if (sayi % j == 0) {
+                topla += j;
+            }
+            j++;
+        }
+        if ((sayi==topla)){
+            System.out.println("muk");
+        }else System.out.println("degıl");
+
 
     }
-}
+    }
+

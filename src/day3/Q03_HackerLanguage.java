@@ -23,7 +23,7 @@ hackerDili2("java ile hersey guzel");
     String[] arr=new String[str.length()];
         for (int i = 0; i < str.length(); i++) {
             arr[i]=str.substring(i,i+1);
-            System.out.println(arr[i]+"");
+            System.out.print(arr[i]+" ");
 
         }
         System.out.println();
@@ -46,7 +46,7 @@ hackerDili2("java ile hersey guzel");
                 replaceAll("e","3").
                 replaceAll("i","1").
                 replaceAll("o","0"));
-        System.out.println(str);
+        System.out.print(str);
     }
 
 }

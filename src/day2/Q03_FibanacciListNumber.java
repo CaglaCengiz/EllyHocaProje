@@ -33,6 +33,20 @@ public class Q03_FibanacciListNumber {
         }else {
             System.out.println("girdiğiniz sayı fibonacci dizisinde bulunmamaktadır");
         }
+//2.yol
+        System.out.println("Bir sayi giriniz :");
+        int sayi = scan.nextInt();
+        int t1=0;
+        int t2=1;
+        for (int j = 0; j <sayi ; j++) {
+            System.out.print(t1 +"+");
+            int toplam=t1+t2;
+            t1=t2;
+            t2=toplam;
+
+        }
 
     }
+
 }
+
